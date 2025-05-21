@@ -3,9 +3,9 @@
 <suite name="Suite1" parallel="methods" thread-count="1" verbose="1" >
   <test name="Nopackage" >
     <classes>
-		<parameter name="browser" value="{browser}"/>
-        <parameter name="islambdatest" value="{islambdatest}"/>
-        <parameter name="isheadless" value="{islambdatest}"/>
+		<parameter name="browser" value="${browser}"/>
+        <parameter name="islambdatest" value="$(islambdatest)"/>
+        <parameter name="isheadless" value="${isheadless}"/>
        	<class name="com.ui.tests.LoginTest" />
     </classes>
   </test>

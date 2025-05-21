@@ -55,7 +55,7 @@ public class TestListener implements ITestListener {
 	
 	public void onStart(ITestContext context) {
 	    // not implemented
-		ExtentReporterUtility.setupSparkReporter("report1.html");
+		ExtentReporterUtility.setupSparkReporter("report.html");
 	  }
 
 	public void onFinish(ITestContext context) {

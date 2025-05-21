@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite1" class="navigator-link">
-              <span class="suite-name border-skipped">Suite1</span>
+              <span class="suite-name border-passed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods skipped suite-Suite1"> (hide)</a> <!-- hide-methods skipped suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods skipped suite-Suite1"> (show)</a> <!-- show-methods skipped suite-Suite1 -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite1">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="com.ui.tests.LoginTest" class="method navigator-link" hash-for-method="Logintest(com.ui.pojo.User@19db44fa)">Logintest(com.ui.pojo.User@19db44fa)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite1 -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,7 +103,12 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="com.ui.tests.LoginTest" class="method navigator-link" hash-for-method="Logintest(com.ui.pojo.User@1a7aee0a)">Logintest(com.ui.pojo.User@1a7aee0a)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="com.ui.tests.LoginTest" class="method navigator-link" hash-for-method="Logintest(com.ui.pojo.User@7611c2f4)">Logintest(com.ui.pojo.User@7611c2f4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="com.ui.tests.LoginTest" class="method navigator-link" hash-for-method="Logintest(com.ui.pojo.User@1c303414)">Logintest(com.ui.pojo.User@1c303414)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -132,58 +123,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.ui.tests.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Logintest(com.ui.pojo.User@19db44fa)">
-                  </a> <!-- Logintest(com.ui.pojo.User@19db44fa) -->
-                  <span class="method-name">Logintest</span>
-                  <span class="parameters">(com.ui.pojo.User@19db44fa)</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-JEK7HQM&apos;, ip: &apos;192.168.139.241&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:152)
-	at com.utility.LambdaTest.intializelambdatestsession(LambdaTest.java:36)
-	at com.ui.tests.TestBase.setup(TestBase.java:26)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	... 25 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	... 3 more
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(verify valid user login)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-skipped -->
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -192,10 +131,20 @@ Caused by: java.util.concurrent.TimeoutException
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Logintest(com.ui.pojo.User@1a7aee0a)">
-                  </a> <!-- Logintest(com.ui.pojo.User@1a7aee0a) -->
+                  <a name="Logintest(com.ui.pojo.User@7611c2f4)">
+                  </a> <!-- Logintest(com.ui.pojo.User@7611c2f4) -->
                   <span class="method-name">Logintest</span>
-                  <span class="parameters">(com.ui.pojo.User@1a7aee0a)</span>
+                  <span class="parameters">(com.ui.pojo.User@7611c2f4)</span>
+                  <em>
+(verify valid user login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Logintest(com.ui.pojo.User@1c303414)">
+                  </a> <!-- Logintest(com.ui.pojo.User@1c303414) -->
+                  <span class="method-name">Logintest</span>
+                  <span class="parameters">(com.ui.pojo.User@1c303414)</span>
                   <em>
 (verify valid user login)                  </em>
                 </div> <!-- method-content -->
@@ -213,9 +162,9 @@ Caused by: java.util.concurrent.TimeoutException
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Nopackage&quot;&gt;
-    &lt;parameter name=&quot;islambdatest&quot; value=&quot;{true}&quot;/&gt;
-    &lt;parameter name=&quot;isheadless&quot; value=&quot;{false}&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;{chrome}&quot;/&gt;
+    &lt;parameter name=&quot;islambdatest&quot; value=&quot;$(islambdatest)&quot;/&gt;
+    &lt;parameter name=&quot;isheadless&quot; value=&quot;false&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.ui.tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
@@ -277,16 +226,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Logintest')
 data.setCell(0, 2, 'com.ui.tests.LoginTest')
-data.setCell(0, 3, 3885);
+data.setCell(0, 3, 3139);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Logintest')
 data.setCell(1, 2, 'com.ui.tests.LoginTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 2633);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -314,30 +263,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.ui.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(chrome, true, true, [TestResult name={null} status=CREATED method=LoginTest.Logintest(com.ui.pojo.Us...)</span>
+                <span class="method-name">setup(chrome, false, false, [TestResult name={null} status=CREATED method=LoginTest.Logintest(com.ui.pojo....)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Logintest(com.ui.pojo.User@1a7aee0a)</span>
-                <span class="method-start">36080 ms</span>
+                <span class="method-name">Logintest(com.ui.pojo.User@7611c2f4)</span>
+                <span class="method-start">8255 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">39974 ms</span>
+                <span class="method-start">11401 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setup(chrome, true, true, [TestResult name={null} status=CREATED method=LoginTest.Logintest(com.ui.pojo.Us...)</span>
-                <span class="method-start">40905 ms</span>
+                <span class="method-name">setup(chrome, false, false, [TestResult name={null} status=CREATED method=LoginTest.Logintest(com.ui.pojo....)</span>
+                <span class="method-start">11563 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Logintest(com.ui.pojo.User@19db44fa)</span>
-                <span class="method-start">220942 ms</span>
+                <span class="method-name">Logintest(com.ui.pojo.User@1c303414)</span>
+                <span class="method-start">17451 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">220942 ms</span>
+                <span class="method-start">20086 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
