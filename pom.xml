@@ -10,22 +10,31 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <description>Test Automation FW Updated</description>
   <build>
 		<plugins>
-	      <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-surefire-plugin</artifactId>
-	        <version>3.5.3</version>
-	        <configuration>
-	          <suiteXmlFiles>
-	            <suiteXmlFile>testng.xml</suiteXmlFile>
-	          </suiteXmlFiles>
-		      <systemPropertyVariables>
-	            <browser>${browser}</browser>
-	            <islambdatest>${islambdatest}</islambdatest>
-	            <isheadless>${isheadless}</isheadless>
-	          </systemPropertyVariables>
-	        </configuration>
-	      </plugin>
-	</plugins>	  
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>3.14.0</version>
+		        <configuration>
+		          <source>11</source>
+		          <target>11</target>
+		        </configuration>
+      	  	</plugin>
+      	  	<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.5.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testng.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+			      <systemPropertyVariables>
+		            <browser>${browser}</browser>
+		            <islambdatest>${islambdatest}</islambdatest>
+		            <isheadless>${isheadless}</isheadless>
+		          </systemPropertyVariables>
+		        </configuration>
+			</plugin>
+      	 </plugins>	  
   </build>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
   <dependencies>
