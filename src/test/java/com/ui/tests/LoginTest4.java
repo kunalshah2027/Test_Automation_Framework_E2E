@@ -13,7 +13,7 @@ public class LoginTest4 {
 		@BeforeMethod(description = "do browser setup before test method")
 		public void setup()
 		{
-			homepage = new HomePage(Browser.CHROME);
+			homepage = new HomePage(Browser.CHROME,true);
 		}
 	
 		

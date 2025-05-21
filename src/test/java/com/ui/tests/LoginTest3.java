@@ -13,7 +13,7 @@ public class LoginTest3 {
 		@Test(description = "verify valid user login", groups = {"e2e","sanity"})
 		public void Logintest()
 		{	
-		HomePage homepage = new HomePage(Browser.EDGE);
+		HomePage homepage = new HomePage(Browser.EDGE,true);
 		String title = homepage.GotoLoginPage().doLoginwith("deworek432@magpit.com", "password").getusername();
 		System.out.println(title);
 		

@@ -8,6 +8,25 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <version>0.0.1-SNAPSHOT</version>
   <name>automation_assignment</name>
   <description>Test Automation FW Updated</description>
+  <build>
+		<plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-surefire-plugin</artifactId>
+	        <version>3.5.3</version>
+	        <configuration>
+	          <suiteXmlFiles>
+	            <suiteXmlFile>testng.xml</suiteXmlFile>
+	          </suiteXmlFiles>
+		      <systemPropertyVariables>
+	            <browser>${browser}</browser>
+	            <islambdatest>${islambdatest}</islambdatest>
+	            <isheadless>${isheadless}</isheadless>
+	          </systemPropertyVariables>
+	        </configuration>
+	      </plugin>
+	</plugins>	  
+  </build>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
   <dependencies>
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -28,6 +47,18 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <groupId>com.google.code.gson</groupId>
     <artifactId>gson</artifactId>
     <version>2.13.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.2</version>
 </dependency>
 	</dependencies>
 </project>
