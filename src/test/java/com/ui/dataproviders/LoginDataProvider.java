@@ -20,7 +20,7 @@ public class LoginDataProvider {
 	@DataProvider(name = "LoginDataProvider")
 	public Iterator<Object[]> logindataprovider() {
 		Gson gson = new Gson();
-		File jsonfile = new File(System.getProperty("user.dir") + "\\testdata\\logindata.json");
+		File jsonfile = new File(System.getProperty("user.dir") + "\\src\\test\\java\\com\\ui\\dataproviders\\logindata.json");
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(jsonfile);

@@ -1,8 +1,5 @@
 package com.ui.listeners;
 
-import java.util.Arrays;
-
-import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -14,19 +11,17 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.ui.tests.TestBase;
 import com.utility.BrowserUtility;
 import com.utility.ExtentReporterUtility;
-import com.utility.LoggerUtility;
 
 public class TestListener implements ITestListener {
-	Logger logger = LoggerUtility.getLogger(this.getClass());
 	
 	ExtentSparkReporter extentSparkReporter;
 	ExtentReports extentReports;
 	ExtentTest extentTest;
 	
 	public void onTestStart(ITestResult result) {
-		logger.info(result.getMethod().getMethodName());
-		logger.info(result.getMethod().getDescription());
-		logger.info(Arrays.toString(result.getMethod().getGroups()));
+		//logger.info(result.getMethod().getMethodName());
+		//logger.info(result.getMethod().getDescription());
+		//logger.info(Arrays.toString(result.getMethod().getGroups()));
 	    // not implemented
 		ExtentReporterUtility.createExtentTest(result.getMethod().getMethodName());
 	  }

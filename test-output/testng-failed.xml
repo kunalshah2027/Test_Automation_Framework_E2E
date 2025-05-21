@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="methods" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
   <test thread-count="1" parallel="methods" name="Nopackage(failed)">
-    <parameter name="islambdatest" value="{true}"/>
-    <parameter name="isheadless" value="{false}"/>
-    <parameter name="browser" value="{chrome}"/>
+    <parameter name="islambdatest" value="$(islambdatest)"/>
+    <parameter name="isheadless" value="false"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.ui.tests.LoginTest">
         <methods>
           <include name="setup"/>
-          <include name="Logintest"/>
+          <include name="Logintest" invocation-numbers="0"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.ui.tests.LoginTest -->
