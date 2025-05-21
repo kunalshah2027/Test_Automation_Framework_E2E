@@ -38,5 +38,22 @@ jobs:
         name: Extent Report
         path: report.html
 
+    - name: Copy Report to gh-pages Folder 
+      if: always()
+
+      run: |
+        mkdir -p public/extent-report
+        cp -R report.html public/extent-report/
+        ls -l
+
+    - name: Deploy
+      if: always()
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        folder: public/extent-report/
+        token: ${{ secrets.PAT}}
+        clean: true
+ 
+
     - name: Test Execution Status
       run: echo "Test Execution Completed"
