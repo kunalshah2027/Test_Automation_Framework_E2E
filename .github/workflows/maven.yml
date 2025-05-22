@@ -51,7 +51,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         folder: public/extent-report/
-        token: ${{ secrets.PAT}}
+        token: ${{ secrets.PAT123}}
         clean: true
  
 
