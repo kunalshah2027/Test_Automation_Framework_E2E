@@ -1,12 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" parallel="methods" thread-count="1" verbose="1" >
-  <test name="Nopackage" >
+<suite name="Suite1" parallel="methods" thread-count="8" verbose="1" >
+  <test name="UI Automation Tests" >	  
+	  <parameter name="browser" value="${browser}"/>
+      <parameter name="islambdatest" value="$(islambdatest)"/>
+      <parameter name="isheadless" value="${isheadless}"/>
     <classes>
-		<parameter name="browser" value="${browser}"/>
-        <parameter name="islambdatest" value="$(islambdatest)"/>
-        <parameter name="isheadless" value="${isheadless}"/>
-       	<class name="com.ui.tests.LoginTest" />
+       	<class name="com.ui.tests.LoginTest"/>
+       	<class name="com.ui.tests.InvalidLoginTest"/>
+       	<class name="com.ui.tests.ProductCheckOutTest"/>
+       	<class name="com.ui.tests.SearchProductTest"/>
     </classes>
   </test>
 </suite>

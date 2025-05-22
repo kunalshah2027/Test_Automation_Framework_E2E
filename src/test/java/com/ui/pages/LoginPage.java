@@ -10,6 +10,7 @@ public class LoginPage extends BrowserUtility{
 	private static final By emailtextboxlocator = By.id("email");
 	private static final By passwordtextboxlocator = By.id("passwd");
 	private static final By submitloginbuttonlocator = By.id("SubmitLogin");
+	private static final By error_invalid_creds = By.xpath("//div[contains(@class,\"alert-danger\")]/ol/li");
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -23,6 +24,20 @@ public class LoginPage extends BrowserUtility{
 		click(submitloginbuttonlocator);
 		MyAccountPage MyAccountPage = new MyAccountPage(getDriver());
 		return MyAccountPage;
+	}
+	
+	public LoginPage doLoginwithinvalidcreds(String un, String psw)
+	{
+		entertext(emailtextboxlocator,un);
+		entertext(passwordtextboxlocator,psw);
+		click(submitloginbuttonlocator);
+		LoginPage LoginPage = new LoginPage(getDriver());
+		return LoginPage;
+	}
+	
+	public String geterrormsg()
+	{
+		return visibletext(error_invalid_creds);
 	}
 
 }
